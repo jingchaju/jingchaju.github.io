@@ -4,16 +4,16 @@
   
   
   <entry>
-    <title>hello</title>
-    <link href="/2024/08/08/hello-hexo/"/>
-    <url>/2024/08/08/hello-hexo/</url>
+    <title>hexo博客，倔强的白嫖日志</title>
+    <link href="/2024/08/08/baipiao/"/>
+    <url>/2024/08/08/baipiao/</url>
     
-    <content type="html"><![CDATA[<p>下六个蛋……</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo......<br></code></pre></td></tr></table></figure><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">npm install hexo<br></code></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">npm install hexo<br></code></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">npm install hexo<br></code></pre></td></tr></table></figure><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">npm install hexo<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="白嫖历程"><a href="#白嫖历程" class="headerlink" title="白嫖历程"></a>白嫖历程</h2><ul><li>GitHub Pages：jingchaju.github.io</li><li>zeabur：usdt.zeabur.app</li><li>netlify：nanshen.netlify.com</li><li>Vercel：看到还要手机号接码，暂时不嫖这家~</li></ul>]]></content>
     
     
     <categories>
       
-      <category>hexo</category>
+      <category>白嫖日志</category>
       
     </categories>
     
@@ -22,7 +22,9 @@
       
       <tag>hexo</tag>
       
-      <tag>juejiang</tag>
+      <tag>倔强</tag>
+      
+      <tag>白嫖日志</tag>
       
     </tags>
     
