@@ -21,29 +21,27 @@
   <meta name="author" content="倔强">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前提 SSH连接上服务器，确定操作系统的环境是纯净的，没有配置过其他环境。 推荐工具：Xshell 和 FinalShell  Centos系统命令123yum install -y wget &amp;&amp; wget -O install.sh http:&#x2F;&#x2F;www.aapanel.com&#x2F;script&#x2F;install_6.0_en.sh &amp;&amp; bash install.s">
+    <meta name="description" content="写在前面网站趋于稳定，又迎来nginx调优，先和大家分享我CF的 WAF规则，因为这个是最有效的防御，能抵御大量脚本小子的恶意攻击流量，已经被我验证数月。 在海外做独立站电商网站首选CF的CDN服务，因为太强大了，没有之一。中小型需求不多直接免费到爽。接入后网站加速防护全全交给CF了。最稳的选择。 开始吧！ 进入 WAF配置页 进入CF的后台，选择你要防御的站点域名。  https:&#x2F;&#x2F;dash.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="宝塔面板国际版aaPanel安装保姆级教程,国际版宝塔安装,国际版宝塔一键安装命令">
-<meta property="og:url" content="https://jingchaju.github.io/2024/08/06/bthwb/index.html">
+<meta property="og:title" content="（已实测有效）Cloudflare免费网站防护，普遍规则设置，CF防CC攻击规则，waf规则，cloudflare网站防攻击">
+<meta property="og:url" content="https://jingchaju.github.io/2024/08/06/cloudflare1/index.html">
 <meta property="og:site_name" content="倔强的&quot;警察局&quot;">
-<meta property="og:description" content="前提 SSH连接上服务器，确定操作系统的环境是纯净的，没有配置过其他环境。 推荐工具：Xshell 和 FinalShell  Centos系统命令123yum install -y wget &amp;&amp; wget -O install.sh http:&#x2F;&#x2F;www.aapanel.com&#x2F;script&#x2F;install_6.0_en.sh &amp;&amp; bash install.s">
+<meta property="og:description" content="写在前面网站趋于稳定，又迎来nginx调优，先和大家分享我CF的 WAF规则，因为这个是最有效的防御，能抵御大量脚本小子的恶意攻击流量，已经被我验证数月。 在海外做独立站电商网站首选CF的CDN服务，因为太强大了，没有之一。中小型需求不多直接免费到爽。接入后网站加速防护全全交给CF了。最稳的选择。 开始吧！ 进入 WAF配置页 进入CF的后台，选择你要防御的站点域名。  https:&#x2F;&#x2F;dash.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://tc.izhan.cc/i/2024/03/25/003530.png">
-<meta property="article:published_time" content="2024-08-06T19:39:34.000Z">
-<meta property="article:modified_time" content="2024-08-10T04:40:54.893Z">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/08/pb7l7s.jpeg">
+<meta property="article:published_time" content="2024-08-06T20:32:12.000Z">
+<meta property="article:modified_time" content="2024-08-10T04:50:27.950Z">
 <meta property="article:author" content="倔强">
-<meta property="article:tag" content="宝塔面板">
-<meta property="article:tag" content="aaPanel">
-<meta property="article:tag" content="国际版宝塔">
 <meta property="article:tag" content="分享交流">
+<meta property="article:tag" content="Cloudflare">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://tc.izhan.cc/i/2024/03/25/003530.png">
+<meta name="twitter:image" content="https://tc.izhan.cc/i/2024/08/08/pb7l7s.jpeg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>宝塔面板国际版aaPanel安装保姆级教程,国际版宝塔安装,国际版宝塔一键安装命令 - 倔强的&#34;警察局&#34;</title>
+  <title>（已实测有效）Cloudflare免费网站防护，普遍规则设置，CF防CC攻击规则，waf规则，cloudflare网站防攻击 - 倔强的&#34;警察局&#34;</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -209,7 +207,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="宝塔面板国际版aaPanel安装保姆级教程,国际版宝塔安装,国际版宝塔一键安装命令"></span>
+            <span id="subtitle" data-typed-text="（已实测有效）Cloudflare免费网站防护，普遍规则设置，CF防CC攻击规则，waf规则，cloudflare网站防攻击"></span>
           
         </div>
 
@@ -220,7 +218,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-06 12:39" pubdate>
+        <time datetime="2024-08-06 13:32" pubdate>
           2024年8月6日 下午
         </time>
       </span>
@@ -232,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          146 字
+          628 字
         
       </span>
     
@@ -243,7 +241,7 @@
         
         
         
-          2 分钟
+          6 分钟
         
       </span>
     
@@ -284,28 +282,61 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">宝塔面板国际版aaPanel安装保姆级教程,国际版宝塔安装,国际版宝塔一键安装命令</h1>
+            <h1 id="seo-header">（已实测有效）Cloudflare免费网站防护，普遍规则设置，CF防CC攻击规则，waf规则，cloudflare网站防攻击</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><ul>
-<li>SSH连接上服务器，确定操作系统的环境是纯净的，没有配置过其他环境。</li>
-<li>推荐工具：<code>Xshell</code> 和 <code>FinalShell</code></li>
+                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>网站趋于稳定，又迎来nginx调优，先和大家分享我CF的 WAF规则，因为这个是最有效的防御，能抵御大量脚本小子的恶意攻击流量，已经被我验证数月。</p>
+<p>在海外做独立站电商网站首选CF的CDN服务，因为太强大了，没有之一。中小型需求不多直接免费到爽。接入后网站加速防护全全交给CF了。最稳的选择。</p>
+<p>开始吧！</p>
+<h2 id="进入-WAF配置页"><a href="#进入-WAF配置页" class="headerlink" title="进入 WAF配置页"></a>进入 WAF配置页</h2><ul>
+<li><p>进入CF的后台，选择你要防御的站点域名。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://dash.cloudflare.com/login/">https://dash.cloudflare.com/login/</a></p>
+</li>
+<li><p>记得在DNS选项，开启小云朵。这就开启CDN了，后续防御规则才会生效。<br> <img src="https://tc.izhan.cc/i/2024/07/08/gqm1dk.jpeg" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+<li><p>选择安全性 WAF<br> <img src="https://tc.izhan.cc/i/2024/07/08/gqtgpk.jpeg" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+<li><p>四个WAF规则，一般大家就三个规则。放行自己，放行SEO爬虫，质询刻意流量。</p>
+</li>
+<li><p>添加规则<br> <img src="https://tc.izhan.cc/i/2024/07/08/grr6tm.jpeg" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+<li><p>选择正则表达式添加规则，复制规则保存即可。</p>
+</li>
 </ul>
-<h2 id="Centos系统命令"><a href="#Centos系统命令" class="headerlink" title="Centos系统命令"></a>Centos系统命令</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs php">yum install -y wget &amp;&amp; wget -O install.sh http:<span class="hljs-comment">//www.aapanel.com/script/install_6.0_en.sh &amp;&amp; bash install.sh aapanel</span><br><br><span class="hljs-comment">#至centos停止维护后，需要先更换源才能使用此命令</span><br></code></pre></td></tr></table></figure>
-
-
-<h2 id="Ubuntu系统命令"><a href="#Ubuntu系统命令" class="headerlink" title="Ubuntu系统命令"></a>Ubuntu系统命令</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">wget -O install.sh http:<span class="hljs-comment">//www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; sudo bash install.sh aapanel</span><br></code></pre></td></tr></table></figure>
-
-
-<h2 id="Debian系统命令"><a href="#Debian系统命令" class="headerlink" title="Debian系统命令"></a>Debian系统命令</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">wget -O install.sh http:<span class="hljs-comment">//www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; bash install.sh aapanel</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="宝塔命令改账号密码"><a href="#宝塔命令改账号密码" class="headerlink" title="宝塔命令改账号密码"></a>宝塔命令改账号密码</h2><ul>
-<li>终端输入：bt</li>
-<li>然后发：14 </li>
-<li>一般改账号是：6</li>
-<li>然后密码是：5</li>
+<h2 id="放行爬虫seo和自己"><a href="#放行爬虫seo和自己" class="headerlink" title="放行爬虫seo和自己"></a>放行爬虫seo和自己</h2><ul>
+<li><p>以下列出三个规则的正则表达式</p>
+</li>
+<li><p>第一个放行自己原站IP，跟相连有关的ip放行</p>
+</li>
+<li><p>IPV4和IPV6地址改成自己</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">(ip.src eq <span class="hljs-number">192.168</span><span class="hljs-number">.7</span><span class="hljs-number">.17</span>) or (ip.src eq <span class="hljs-number">2901</span>:c080:<span class="hljs-number">1110</span>:<span class="hljs-number">4</span>c91:<span class="hljs-number">5400</span>:<span class="hljs-number">4f</span>f:feb8:<span class="hljs-number">130</span>a)...<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>选择操作跳过按图设置，随后保存规则<br> <img src="https://tc.izhan.cc/i/2024/07/08/gug2uy.jpeg" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+<li><p>第二个放行SEO爬虫</p>
+</li>
+<li><p>无脑复制即可，无需修改，</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">(cf.client.bot) or (http.user_agent contains <span class="hljs-string">&quot;duckduckgo&quot;</span>) or (http.user_agent contains <span class="hljs-string">&quot;facebookexternalhit&quot;</span>) or (http.user_agent contains <span class="hljs-string">&quot;Feedfetcher-Google&quot;</span>) or (http.user_agent contains <span class="hljs-string">&quot;LinkedInBot&quot;</span>) or (http.user_agent contains <span class="hljs-string">&quot;Mediapartners-Google&quot;</span>) or (http.user_agent contains <span class="hljs-string">&quot;msnbot&quot;</span>) or (http.user_agent contains <span class="hljs-string">&quot;Slackbot&quot;</span>) or (http.user_agent contains <span class="hljs-string">&quot;TwitterBot&quot;</span>) or (http.user_agent contains <span class="hljs-string">&quot;ia_archive&quot;</span>) or (http.user_agent contains <span class="hljs-string">&quot;yahoo&quot;</span>)...<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>操作也选择跳过，随后保存</p>
+</li>
+</ul>
+<h2 id="质询恶意流量规则"><a href="#质询恶意流量规则" class="headerlink" title="质询恶意流量规则"></a>质询恶意流量规则</h2><ul>
+<li><p>至关重要。但也很简单。地域限制，HTTP版本限制都十分管用。在之前大佬的基础上进化规则。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">(cf.threat_score ge <span class="hljs-number">5</span> and not cf.client.bot) or (not http.request.version in &#123;<span class="hljs-string">&quot;HTTP/2&quot;</span> <span class="hljs-string">&quot;HTTP/3&quot;</span>&#125;) or (not ip.geoip.country in &#123;<span class="hljs-string">&quot;AU&quot;</span> <span class="hljs-string">&quot;CA&quot;</span> <span class="hljs-string">&quot;FR&quot;</span> <span class="hljs-string">&quot;DE&quot;</span> <span class="hljs-string">&quot;HK&quot;</span> <span class="hljs-string">&quot;IR&quot;</span> <span class="hljs-string">&quot;JP&quot;</span> <span class="hljs-string">&quot;KR&quot;</span> <span class="hljs-string">&quot;MY&quot;</span> <span class="hljs-string">&quot;SG&quot;</span> <span class="hljs-string">&quot;TW&quot;</span> <span class="hljs-string">&quot;GB&quot;</span> <span class="hljs-string">&quot;US&quot;</span> <span class="hljs-string">&quot;CN&quot;</span>&#125;)...<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>这些大写字母是国家或地区的简称，在其中的都是放行的国家。如果你只在香港做业务可以只填写HK，其余的全部会进入质询拦截模式，俗称CF的5秒盾。<br> <img src="https://tc.izhan.cc/i/2024/07/08/gy9zwy.jpeg" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+<li><p>后续观察</p>
+</li>
+<li><p>这一波设置基本就ok了。可以放几天试试，观察放行和拦截情况。</p>
+</li>
+</ul>
+<h2 id="频率限制"><a href="#频率限制" class="headerlink" title="频率限制"></a>频率限制</h2><ul>
+<li>对了还有频率限制，也很关键。<br> <img src="https://tc.izhan.cc/i/2024/07/08/gziu7h.jpeg" srcset="/img/loading.gif" lazyload alt="Test"><br> <img src="https://tc.izhan.cc/i/2024/07/08/gzj423.jpeg" srcset="/img/loading.gif" lazyload alt="Test"><br> <img src="https://tc.izhan.cc/i/2024/07/08/gzj62f.jpeg" srcset="/img/loading.gif" lazyload alt="Test"></li>
 </ul>
 
                 
@@ -340,13 +371,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/" class="print-no-link">#宝塔面板</a>
-      
-        <a href="/tags/aaPanel/" class="print-no-link">#aaPanel</a>
-      
-        <a href="/tags/%E5%9B%BD%E9%99%85%E7%89%88%E5%AE%9D%E5%A1%94/" class="print-no-link">#国际版宝塔</a>
-      
         <a href="/tags/%E5%88%86%E4%BA%AB%E4%BA%A4%E6%B5%81/" class="print-no-link">#分享交流</a>
+      
+        <a href="/tags/Cloudflare/" class="print-no-link">#Cloudflare</a>
       
     </div>
   
@@ -358,8 +385,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>宝塔面板国际版aaPanel安装保姆级教程,国际版宝塔安装,国际版宝塔一键安装命令</div>
-      <div>https://jingchaju.github.io/2024/08/06/bthwb/</div>
+      <div>（已实测有效）Cloudflare免费网站防护，普遍规则设置，CF防CC攻击规则，waf规则，cloudflare网站防攻击</div>
+      <div>https://jingchaju.github.io/2024/08/06/cloudflare1/</div>
     </div>
     <div class="license-meta">
       
@@ -403,9 +430,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/08/06/cloudflare1/" title="（已实测有效）Cloudflare免费网站防护，普遍规则设置，CF防CC攻击规则，waf规则，cloudflare网站防攻击">
+                      <a href="/2024/08/08/dujiaoka1/" title="独角数卡,独角发卡搭建安装教程,比较完整的教程,宝塔户百分百看懂">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">（已实测有效）Cloudflare免费网站防护，普遍规则设置，CF防CC攻击规则，waf规则，cloudflare网站防攻击</span>
+                        <span class="hidden-mobile">独角数卡,独角发卡搭建安装教程,比较完整的教程,宝塔户百分百看懂</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -413,8 +440,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/06/hexo/" title="Hexo博客，小白的一分钟搭建安装教程，五句命令即可部署完成">
-                        <span class="hidden-mobile">Hexo博客，小白的一分钟搭建安装教程，五句命令即可部署完成</span>
+                      <a href="/2024/08/06/bthwb/" title="宝塔面板国际版aaPanel安装保姆级教程,国际版宝塔安装,国际版宝塔一键安装命令">
+                        <span class="hidden-mobile">宝塔面板国际版aaPanel安装保姆级教程,国际版宝塔安装,国际版宝塔一键安装命令</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
