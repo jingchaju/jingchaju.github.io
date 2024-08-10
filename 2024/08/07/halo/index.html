@@ -21,27 +21,38 @@
   <meta name="author" content="倔强">
   <meta name="keywords" content="">
   
-    <meta name="description" content="准备工作 搭建Hexo博客首先要安装Node.js和Git Node.js下载地址 nodejs.org    Git下载地址 git-scm.com 为了方便编辑，还可以安装个Visual Studio Code   开始安装 安装好后在桌面新建一个文件夹，名字随意。 在新建的文件夹内右击鼠标 选择打开：Open Git Bash here 切换镜像源目的是为了更快高潮 输入命令： 1npm c">
+    <meta name="description" content="前言 Halo博客系统的宝塔部署教程 这个系统也是热门，人气比Typecho还高，不过我已经有了爱不释手的Hexo哈哈哈 全程详细的宝塔图文教程（包括绑定域名） 前两天搜了一下谷歌，发现宝塔部署Halo的只看到几篇文章教程，零零散散的也没配详细图文 有的纯小白如果漏了一步截图可能就蒙了，所以我来个全程图文~  一、宝塔拉取镜像并运行 宝塔这个自己装好没问题吧，登录后在左边栏docker容器，点击安">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客，小白的一分钟搭建安装教程，五句命令即可部署完成">
-<meta property="og:url" content="https://jingchaju.github.io/2024/08/06/hexo/index.html">
+<meta property="og:title" content="halo博客快速部署,应该算是最详细的宝塔搭建教程,小白一眼就会的详细教程（图文）">
+<meta property="og:url" content="https://jingchaju.github.io/2024/08/07/halo/index.html">
 <meta property="og:site_name" content="倔强的&quot;警察局&quot;">
-<meta property="og:description" content="准备工作 搭建Hexo博客首先要安装Node.js和Git Node.js下载地址 nodejs.org    Git下载地址 git-scm.com 为了方便编辑，还可以安装个Visual Studio Code   开始安装 安装好后在桌面新建一个文件夹，名字随意。 在新建的文件夹内右击鼠标 选择打开：Open Git Bash here 切换镜像源目的是为了更快高潮 输入命令： 1npm c">
+<meta property="og:description" content="前言 Halo博客系统的宝塔部署教程 这个系统也是热门，人气比Typecho还高，不过我已经有了爱不释手的Hexo哈哈哈 全程详细的宝塔图文教程（包括绑定域名） 前两天搜了一下谷歌，发现宝塔部署Halo的只看到几篇文章教程，零零散散的也没配详细图文 有的纯小白如果漏了一步截图可能就蒙了，所以我来个全程图文~  一、宝塔拉取镜像并运行 宝塔这个自己装好没问题吧，登录后在左边栏docker容器，点击安">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://jingchaju.github.io/img/fl.png">
-<meta property="article:published_time" content="2024-08-06T08:16:03.000Z">
-<meta property="article:modified_time" content="2024-08-10T05:25:08.900Z">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twptvo.png">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twqa9y.png">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twpv5t.png">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twq6o3.png">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twq6yo.png">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twqe3t.png">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twqmoe.png">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twqi0u.png">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twptyy.png">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twquj7.png">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twqk9s.png">
+<meta property="og:image" content="https://tc.izhan.cc/i/2024/08/07/twqr7e.png">
+<meta property="article:published_time" content="2024-08-08T01:02:46.000Z">
+<meta property="article:modified_time" content="2024-08-10T05:24:56.713Z">
 <meta property="article:author" content="倔强">
-<meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="分享交流">
+<meta property="article:tag" content="网站搭建">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://jingchaju.github.io/img/fl.png">
+<meta name="twitter:image" content="https://tc.izhan.cc/i/2024/08/07/twptvo.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Hexo博客，小白的一分钟搭建安装教程，五句命令即可部署完成 - 倔强的&#34;警察局&#34;</title>
+  <title>halo博客快速部署,应该算是最详细的宝塔搭建教程,小白一眼就会的详细教程（图文） - 倔强的&#34;警察局&#34;</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -207,7 +218,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hexo博客，小白的一分钟搭建安装教程，五句命令即可部署完成"></span>
+            <span id="subtitle" data-typed-text="halo博客快速部署,应该算是最详细的宝塔搭建教程,小白一眼就会的详细教程（图文）"></span>
           
         </div>
 
@@ -218,8 +229,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-06 01:16" pubdate>
-          2024年8月6日 凌晨
+        <time datetime="2024-08-07 18:02" pubdate>
+          2024年8月7日 晚上
         </time>
       </span>
     
@@ -230,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          276 字
+          546 字
         
       </span>
     
@@ -241,7 +252,7 @@
         
         
         
-          3 分钟
+          5 分钟
         
       </span>
     
@@ -282,30 +293,55 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hexo博客，小白的一分钟搭建安装教程，五句命令即可部署完成</h1>
+            <h1 id="seo-header">halo博客快速部署,应该算是最详细的宝塔搭建教程,小白一眼就会的详细教程（图文）</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
-<li>搭建Hexo博客首先要安装<code>Node.js</code>和<code>Git</code></li>
-<li><code>Node.js</code>下载地址 nodejs.org   </li>
-<li><code>Git</code>下载地址 git-scm.com</li>
-<li>为了方便编辑，还可以安装个<code>Visual Studio Code</code></li>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+<li><code>Halo</code>博客系统的宝塔部署教程</li>
+<li>这个系统也是热门，人气比<code>Typecho</code>还高，不过我已经有了爱不释手的<code>Hexo</code>哈哈哈</li>
+<li>全程详细的宝塔图文教程（包括绑定域名）</li>
+<li>前两天搜了一下谷歌，发现宝塔部署<code>Halo</code>的只看到几篇文章教程，零零散散的也没配详细图文</li>
+<li>有的纯小白如果漏了一步截图可能就蒙了，所以我来个全程图文~</li>
 </ul>
-<hr>
-<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><ol>
-<li>安装好后在桌面新建一个文件夹，名字随意。</li>
-<li>在新建的文件夹内右击鼠标 选择打开：<code>Open Git Bash here</code></li>
-<li>切换镜像源目的是为了更快高潮 输入命令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry https://registry.npm.taobao.org<br></code></pre></td></tr></table></figure></li>
-<li>切换后继续输入以下命令 安装Hexo：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cnpm install -g hexo-cli<br></code></pre></td></tr></table></figure></li>
-<li>hexo init 自定义博客名  例如： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init blog<br></code></pre></td></tr></table></figure></li>
-<li>执行到这一步，会看到有个 <code>blog</code> 文件夹里面有我们需要的<code>Hexo</code>文件</li>
-<li>注意看是不是在 <code>blog</code> 目录 如果不是输入命令 <code>cd blog</code> 到目录，最简单的就是关闭<code>git</code>然后手动进入<code>blog</code>文件夹在右击鼠标重新打开<code>Open git bash here</code></li>
-<li>然后我们开始测试原始Hexo 是否能运行起来 输入命令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">生成静态文件：<br>hexo g <br><br>没有报错继续输入：<br>hexo s<br></code></pre></td></tr></table></figure>
- 会输出给你个 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 复制到浏览器打开，能正常打开显示 Hexo 原始框架博客即为ojbk</li>
+<h2 id="一、宝塔拉取镜像并运行"><a href="#一、宝塔拉取镜像并运行" class="headerlink" title="一、宝塔拉取镜像并运行"></a>一、宝塔拉取镜像并运行</h2><ol>
+<li><p>宝塔这个自己装好没问题吧，登录后在左边栏<code>docker</code>容器，点击安装<br><img src="https://tc.izhan.cc/i/2024/08/07/twptvo.png" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+<li><p>安装好docker我们通过搜索halo 选最多那个 拉取Halo镜像<br><img src="https://tc.izhan.cc/i/2024/08/07/twqa9y.png" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+<li><p>宝塔终端执行<code>halo安装命令</code>（创建容器）<code>2024.8.7Halo最新版本号为2.18</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -it -d --name halo -p 8090:8090 -v ~/.halo2:/root/.halo2 registry.fit2cloud.com/halo/halo:2.18<br></code></pre></td></tr></table></figure>
+<p><img src="https://tc.izhan.cc/i/2024/08/07/twpv5t.png" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
 </ol>
-<h2 id="本地部署完结"><a href="#本地部署完结" class="headerlink" title="本地部署完结"></a>本地部署完结</h2>
+<h2 id="二、放行Halo端口"><a href="#二、放行Halo端口" class="headerlink" title="二、放行Halo端口"></a>二、放行Halo端口</h2><ol start="4">
+<li><code>Halo</code>默认的端口号是<code>8090</code>宝塔设置放行</li>
+<li>需要注意的是：部分服务器商家可能还需要到服务器平台防火墙放行<br><img src="https://tc.izhan.cc/i/2024/08/07/twq6o3.png" srcset="/img/loading.gif" lazyload alt="Test"></li>
+</ol>
+<h2 id="三、IP-端口号访问"><a href="#三、IP-端口号访问" class="headerlink" title="三、IP:端口号访问"></a>三、IP:端口号访问</h2><ol start="6">
+<li>因为还没绑定域名，所以我们运行成功后可以通过服务器<code>ip:8090</code>访问，例如ip是<code>1.1.1.1</code>，那么就是<code>1.1.1.1:8090</code>访问<br><img src="https://tc.izhan.cc/i/2024/08/07/twq6yo.png" srcset="/img/loading.gif" lazyload alt="Test"></li>
+</ol>
+<h2 id="四、后台选择主题"><a href="#四、后台选择主题" class="headerlink" title="四、后台选择主题"></a>四、后台选择主题</h2><ol start="7">
+<li><p>登录后台后可在<code>Halo</code>官方应用中心选择一款喜欢的主题直接安装。<br><img src="https://tc.izhan.cc/i/2024/08/07/twqe3t.png" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+<li><p>测试主题首页效果<br><img src="https://tc.izhan.cc/i/2024/08/07/twqmoe.png" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+</ol>
+<h2 id="五、绑定域名设置反代"><a href="#五、绑定域名设置反代" class="headerlink" title="五、绑定域名设置反代"></a>五、绑定域名设置反代</h2><ol start="9">
+<li><p>回到宝塔，添加一个站点，绑定自己的域名，不需要设置数据库和PHP<br><img src="https://tc.izhan.cc/i/2024/08/07/twqi0u.png" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+<li><p>然后记得<code>把防跨站关了</code>，还有给自己<code>配个证书</code>。<code>强制HTTPS打开</code>，<code>这三个步骤</code>最最最基本的不需要多说了吧？！</p>
+</li>
+<li><p>点站点域名设置，点开反向代理设置，<code>Halo</code>默认端口是<code>8090</code>，那么应设置为：<code>http://127.0.0.1:8090</code> 其他不用管，点保存即可<br><img src="https://tc.izhan.cc/i/2024/08/07/twptyy.png" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+<li><p>设置好反代后直接浏览器访问自己绑定的域名，ojbk成功搭建<code>halo</code>并绑定域名，你是最靓的仔了<br><img src="https://tc.izhan.cc/i/2024/08/07/twquj7.png" srcset="/img/loading.gif" lazyload alt="Test"><br><img src="https://tc.izhan.cc/i/2024/08/07/twqk9s.png" srcset="/img/loading.gif" lazyload alt="Test"><br><img src="https://tc.izhan.cc/i/2024/08/07/twqr7e.png" srcset="/img/loading.gif" lazyload alt="Test"></p>
+</li>
+</ol>
+<h2 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h2><ul>
+<li>本次教程用的主题叫<code>joe</code>宝塔面板为官方<code>海外版</code>（国际版）</li>
+</ul>
+
                 
               </div>
             
@@ -323,7 +359,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%88%86%E4%BA%AB%E4%BA%A4%E6%B5%81/" class="category-chain-item">分享交流</a>
+  <a href="/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" class="category-chain-item">网站搭建</a>
   
   
 
@@ -338,9 +374,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
-      
         <a href="/tags/%E5%88%86%E4%BA%AB%E4%BA%A4%E6%B5%81/" class="print-no-link">#分享交流</a>
+      
+        <a href="/tags/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" class="print-no-link">#网站搭建</a>
       
     </div>
   
@@ -352,8 +388,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hexo博客，小白的一分钟搭建安装教程，五句命令即可部署完成</div>
-      <div>https://jingchaju.github.io/2024/08/06/hexo/</div>
+      <div>halo博客快速部署,应该算是最详细的宝塔搭建教程,小白一眼就会的详细教程（图文）</div>
+      <div>https://jingchaju.github.io/2024/08/07/halo/</div>
     </div>
     <div class="license-meta">
       
@@ -365,7 +401,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月6日</div>
+          <div>2024年8月7日</div>
         </div>
       
       
@@ -397,9 +433,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/08/06/bthwb/" title="宝塔国际版aaPanel安装保姆级教程,海外版宝塔安装,国际版宝塔一键安装命令">
+                      <a href="/2024/08/08/dujiaoka1/" title="独角数卡,独角发卡搭建安装教程,比较完整的教程,宝塔户百分百看懂">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">宝塔国际版aaPanel安装保姆级教程,海外版宝塔安装,国际版宝塔一键安装命令</span>
+                        <span class="hidden-mobile">独角数卡,独角发卡搭建安装教程,比较完整的教程,宝塔户百分百看懂</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -407,8 +443,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/06/ubuntu-docker/" title="Ubuntu系统安装docker docker-compos 终端命令一键安装">
-                        <span class="hidden-mobile">Ubuntu系统安装docker docker-compos 终端命令一键安装</span>
+                      <a href="/2024/08/07/xuimb/" title="你还在花钱买节点and代理节点？利用空闲服务器搭建翻墙节点，不影响宝塔面板不影响网站运营。妈妈再也不用担心我上网问题~">
+                        <span class="hidden-mobile">你还在花钱买节点and代理节点？利用空闲服务器搭建翻墙节点，不影响宝塔面板不影响网站运营。妈妈再也不用担心我上网问题~</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -76,9 +76,9 @@
     
     <tags>
       
-      <tag>hexo</tag>
+      <tag>Hexo</tag>
       
-      <tag>倔强</tag>
+      <tag>分享交流</tag>
       
       <tag>白嫖日志</tag>
       
@@ -105,9 +105,63 @@
     
     <tags>
       
+      <tag>分享交流</tag>
+      
       <tag>网站搭建</tag>
       
-      <tag>独角数卡</tag>
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>halo博客快速部署,应该算是最详细的宝塔搭建教程,小白一眼就会的详细教程（图文）</title>
+    <link href="/2024/08/07/halo/"/>
+    <url>/2024/08/07/halo/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul><li><code>Halo</code>博客系统的宝塔部署教程</li><li>这个系统也是热门，人气比<code>Typecho</code>还高，不过我已经有了爱不释手的<code>Hexo</code>哈哈哈</li><li>全程详细的宝塔图文教程（包括绑定域名）</li><li>前两天搜了一下谷歌，发现宝塔部署<code>Halo</code>的只看到几篇文章教程，零零散散的也没配详细图文</li><li>有的纯小白如果漏了一步截图可能就蒙了，所以我来个全程图文~</li></ul><h2 id="一、宝塔拉取镜像并运行"><a href="#一、宝塔拉取镜像并运行" class="headerlink" title="一、宝塔拉取镜像并运行"></a>一、宝塔拉取镜像并运行</h2><ol><li><p>宝塔这个自己装好没问题吧，登录后在左边栏<code>docker</code>容器，点击安装<br><img src="https://tc.izhan.cc/i/2024/08/07/twptvo.png" alt="Test"></p></li><li><p>安装好docker我们通过搜索halo 选最多那个 拉取Halo镜像<br><img src="https://tc.izhan.cc/i/2024/08/07/twqa9y.png" alt="Test"></p></li><li><p>宝塔终端执行<code>halo安装命令</code>（创建容器）<code>2024.8.7Halo最新版本号为2.18</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -it -d --name halo -p 8090:8090 -v ~/.halo2:/root/.halo2 registry.fit2cloud.com/halo/halo:2.18<br></code></pre></td></tr></table></figure><p><img src="https://tc.izhan.cc/i/2024/08/07/twpv5t.png" alt="Test"></p></li></ol><h2 id="二、放行Halo端口"><a href="#二、放行Halo端口" class="headerlink" title="二、放行Halo端口"></a>二、放行Halo端口</h2><ol start="4"><li><code>Halo</code>默认的端口号是<code>8090</code>宝塔设置放行</li><li>需要注意的是：部分服务器商家可能还需要到服务器平台防火墙放行<br><img src="https://tc.izhan.cc/i/2024/08/07/twq6o3.png" alt="Test"></li></ol><h2 id="三、IP-端口号访问"><a href="#三、IP-端口号访问" class="headerlink" title="三、IP:端口号访问"></a>三、IP:端口号访问</h2><ol start="6"><li>因为还没绑定域名，所以我们运行成功后可以通过服务器<code>ip:8090</code>访问，例如ip是<code>1.1.1.1</code>，那么就是<code>1.1.1.1:8090</code>访问<br><img src="https://tc.izhan.cc/i/2024/08/07/twq6yo.png" alt="Test"></li></ol><h2 id="四、后台选择主题"><a href="#四、后台选择主题" class="headerlink" title="四、后台选择主题"></a>四、后台选择主题</h2><ol start="7"><li><p>登录后台后可在<code>Halo</code>官方应用中心选择一款喜欢的主题直接安装。<br><img src="https://tc.izhan.cc/i/2024/08/07/twqe3t.png" alt="Test"></p></li><li><p>测试主题首页效果<br><img src="https://tc.izhan.cc/i/2024/08/07/twqmoe.png" alt="Test"></p></li></ol><h2 id="五、绑定域名设置反代"><a href="#五、绑定域名设置反代" class="headerlink" title="五、绑定域名设置反代"></a>五、绑定域名设置反代</h2><ol start="9"><li><p>回到宝塔，添加一个站点，绑定自己的域名，不需要设置数据库和PHP<br><img src="https://tc.izhan.cc/i/2024/08/07/twqi0u.png" alt="Test"></p></li><li><p>然后记得<code>把防跨站关了</code>，还有给自己<code>配个证书</code>。<code>强制HTTPS打开</code>，<code>这三个步骤</code>最最最基本的不需要多说了吧？！</p></li><li><p>点站点域名设置，点开反向代理设置，<code>Halo</code>默认端口是<code>8090</code>，那么应设置为：<code>http://127.0.0.1:8090</code> 其他不用管，点保存即可<br><img src="https://tc.izhan.cc/i/2024/08/07/twptyy.png" alt="Test"></p></li><li><p>设置好反代后直接浏览器访问自己绑定的域名，ojbk成功搭建<code>halo</code>并绑定域名，你是最靓的仔了<br><img src="https://tc.izhan.cc/i/2024/08/07/twquj7.png" alt="Test"><br><img src="https://tc.izhan.cc/i/2024/08/07/twqk9s.png" alt="Test"><br><img src="https://tc.izhan.cc/i/2024/08/07/twqr7e.png" alt="Test"></p></li></ol><h2 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h2><ul><li>本次教程用的主题叫<code>joe</code>宝塔面板为官方<code>海外版</code>（国际版）</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>网站搭建</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>分享交流</tag>
+      
+      <tag>网站搭建</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>你还在花钱买节点and代理节点？利用空闲服务器搭建翻墙节点，不影响宝塔面板不影响网站运营。妈妈再也不用担心我上网问题~</title>
+    <link href="/2024/08/07/xuimb/"/>
+    <url>/2024/08/07/xuimb/</url>
+    
+    <content type="html"><![CDATA[<h2 id="X-UI面板"><a href="#X-UI面板" class="headerlink" title="X-UI面板"></a>X-UI面板</h2><ul><li>作者开源项目地址 <a href="https://github.com/vaxilu/x-ui">https://github.com/vaxilu/x-ui</a></li><li>一键安装<code>x-ui面板</code>搭建翻墙节点，小火箭通用连接</li><li>服务器有效期多久，就能使用多久，剩下大笔买VPN节点代理的钱</li><li>支持多协议多用户的<code>xray</code>面板</li><li>小火箭连接成功截图：<br><img src="https://tc.izhan.cc/i/2024/05/01/141404.jpg" alt="Test"></li></ul><h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍:"></a>功能介绍:</h2><ol><li>系统状态监控</li><li>支持多用户多协议，网页可视化操作</li><li>支持的协议：<code>vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http</code></li><li>支持配置更多传输配置，流量统计，限制流量，限制到期时间，可自定义 xray 配置模板</li><li>支持<code>https</code>访问面板（自备域名 + ssl 证书）</li><li>支持一键SSL证书申请且自动续签，更多高级配置项，详见面板</li></ol><h2 id="安装-升级"><a href="#安装-升级" class="headerlink" title="安装&amp;升级:"></a>安装&amp;升级:</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">bash &lt;(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)<br></code></pre></td></tr></table></figure><p> <img src="https://tc.izhan.cc/i/2024/05/01/140848.png" alt="Test"><br> <img src="https://tc.izhan.cc/i/2024/05/01/140848_1.png" alt="Test"><br> <img src="https://tc.izhan.cc/i/2024/05/01/140849.png" alt="Test"> </p><h4>重点：搭建好后如果打不开，放行面板端口就可以。</h4><p><img src="https://tc.izhan.cc/i/2024/05/01/141019.png" alt="Test"> </p><h4>登录xui面板后先升级版本（建议最新版倒退一两个版本，会比较稳定，新版刚发布有时候不稳定），然后再添加入站（也就是节点）</h4><p><img src="https://tc.izhan.cc/i/2024/05/01/141108.png" alt="Test"><br><img src="https://tc.izhan.cc/i/2024/05/01/141158_1.png" alt="Test"> </p><h4>添加好节点后，还需要到服务器或宝塔放行端口，不然连接不上网络！</h4><p><img src="https://tc.izhan.cc/i/2024/05/01/141158.png" alt="Test"> </p><h4>xui面板可以和宝塔一起用，不影响你宝塔里面的网站。</h4><h4>手机小火箭扫一扫 导入节点直接使用</h4><p><img src="https://tc.izhan.cc/i/2024/05/01/141402.png" alt="Test"><br><img src="https://tc.izhan.cc/i/2024/05/01/141403.png" alt="Test"> </p><h2 id="搭建完毕"><a href="#搭建完毕" class="headerlink" title="搭建完毕~"></a>搭建完毕~</h2><p><strong>芜湖，成功科学上网</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享交流</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>分享交流</tag>
+      
+      <tag>网站搭建</tag>
       
     </tags>
     
@@ -143,7 +197,7 @@
   
   
   <entry>
-    <title>宝塔面板国际版aaPanel安装保姆级教程,国际版宝塔安装,国际版宝塔一键安装命令</title>
+    <title>宝塔国际版aaPanel安装保姆级教程,海外版宝塔安装,国际版宝塔一键安装命令</title>
     <link href="/2024/08/06/bthwb/"/>
     <url>/2024/08/06/bthwb/</url>
     
@@ -159,13 +213,11 @@
     
     <tags>
       
+      <tag>分享交流</tag>
+      
       <tag>宝塔面板</tag>
       
-      <tag>aaPanel</tag>
-      
-      <tag>国际版宝塔</tag>
-      
-      <tag>分享交流</tag>
+      <tag>海外版宝塔</tag>
       
     </tags>
     
@@ -190,9 +242,38 @@
     
     <tags>
       
+      <tag>Hexo</tag>
+      
       <tag>分享交流</tag>
       
-      <tag>Hexo</tag>
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Ubuntu系统安装docker docker-compos 终端命令一键安装</title>
+    <link href="/2024/08/06/ubuntu-docker/"/>
+    <url>/2024/08/06/ubuntu-docker/</url>
+    
+    <content type="html"><![CDATA[<h2 id="安装Docker命令"><a href="#安装Docker命令" class="headerlink" title="安装Docker命令"></a>安装Docker命令</h2><p>在 <code>Ubuntu 20.04</code> 上安装Docker非常简单。您可以使用以下命令来安装 <code>Docker</code> ：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt update<br><span class="hljs-built_in">sudo</span> apt install docker.io<br></code></pre></td></tr></table></figure><h2 id="使用以下命令启动Docker服务并将其设置为开机自启"><a href="#使用以下命令启动Docker服务并将其设置为开机自启" class="headerlink" title="使用以下命令启动Docker服务并将其设置为开机自启"></a>使用以下命令启动Docker服务并将其设置为开机自启</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemctl start docker<br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> docker<br></code></pre></td></tr></table></figure><h2 id="验证Docker"><a href="#验证Docker" class="headerlink" title="验证Docker"></a>验证Docker</h2><p> <strong>运行以下命令，确保Docker已正确安装并正在运行：</strong> </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker --version<br><span class="hljs-built_in">sudo</span> docker info<br></code></pre></td></tr></table></figure><p> <strong>您应该能够看到Docker版本信息和Docker详细信息。</strong> </p><h2 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker-Compose"></a>Docker-Compose</h2><p> <code>Docker Compose</code> 需要从 <code>GitHub</code> 上获取二进制文件并将其安装到 <code> /usr/local/bin/</code> 目录下。使用以下命令下载最新版本的 <code>Docker Compose</code> ：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> curl -L <span class="hljs-string">&quot;https://github.com/docker/compose/releases/latest/download/docker-compose-<span class="hljs-subst">$(uname -s)</span>-<span class="hljs-subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose<br></code></pre></td></tr></table></figure><h2 id="赋予执行权限"><a href="#赋予执行权限" class="headerlink" title="赋予执行权限"></a>赋予执行权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">chmod</span> +x /usr/local/bin/docker-compose<br></code></pre></td></tr></table></figure><h2 id="验证Docker-Compose安装"><a href="#验证Docker-Compose安装" class="headerlink" title="验证Docker Compose安装"></a>验证Docker Compose安装</h2><p>运行以下命令，确保 <code>Docker Compose</code> 已正确安装：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker-compose --version<br></code></pre></td></tr></table></figure><h2 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享交流</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>分享交流</tag>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>Docker docker-compos</tag>
       
     </tags>
     
