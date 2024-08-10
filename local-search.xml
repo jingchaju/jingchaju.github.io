@@ -20,11 +20,11 @@
     
     <tags>
       
+      <tag>分享交流</tag>
+      
       <tag>网站搭建</tag>
       
       <tag>USDT支付</tag>
-      
-      <tag>分享交流</tag>
       
     </tags>
     
@@ -81,6 +81,37 @@
       <tag>网站搭建</tag>
       
       <tag>独角数卡</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>宝塔面板国际版aaPanel安装保姆级教程,国际版宝塔安装,国际版宝塔一键安装命令</title>
+    <link href="/2024/08/06/bthwb/"/>
+    <url>/2024/08/06/bthwb/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><ul><li>SSH连接上服务器，确定操作系统的环境是纯净的，没有配置过其他环境。</li><li>推荐工具：<code>Xshell</code> 和 <code>FinalShell</code></li></ul><h2 id="Centos系统命令"><a href="#Centos系统命令" class="headerlink" title="Centos系统命令"></a>Centos系统命令</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs php">yum install -y wget &amp;&amp; wget -O install.sh http:<span class="hljs-comment">//www.aapanel.com/script/install_6.0_en.sh &amp;&amp; bash install.sh aapanel</span><br><br><span class="hljs-comment">#至centos停止维护后，需要先更换源才能使用此命令</span><br></code></pre></td></tr></table></figure><h2 id="Ubuntu系统命令"><a href="#Ubuntu系统命令" class="headerlink" title="Ubuntu系统命令"></a>Ubuntu系统命令</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">wget -O install.sh http:<span class="hljs-comment">//www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; sudo bash install.sh aapanel</span><br></code></pre></td></tr></table></figure><h2 id="Debian系统命令"><a href="#Debian系统命令" class="headerlink" title="Debian系统命令"></a>Debian系统命令</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">wget -O install.sh http:<span class="hljs-comment">//www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; bash install.sh aapanel</span><br></code></pre></td></tr></table></figure><h2 id="宝塔命令改账号密码"><a href="#宝塔命令改账号密码" class="headerlink" title="宝塔命令改账号密码"></a>宝塔命令改账号密码</h2><ul><li>终端输入：bt</li><li>然后发：14 </li><li>一般改账号是：6</li><li>然后密码是：5</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享交流</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>宝塔面板</tag>
+      
+      <tag>aaPanel</tag>
+      
+      <tag>国际版宝塔</tag>
+      
+      <tag>分享交流</tag>
       
     </tags>
     
