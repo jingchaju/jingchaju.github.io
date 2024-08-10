@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>彩虹代刷网USDT,彩虹云商城USDT,彩虹发卡系统接入Epusdt实现USDT支付,彩虹云商城USDT插件</title>
+    <link href="/2024/08/10/caihusdt/"/>
+    <url>/2024/08/10/caihusdt/</url>
+    
+    <content type="html"><![CDATA[<h2 id="彩虹云商城USDT插件"><a href="#彩虹云商城USDT插件" class="headerlink" title="彩虹云商城USDT插件"></a>彩虹云商城USDT插件</h2><ul><li>已测试原版彩虹和二开版本，都正常</li><li>本站把QQ支付接口修改成了<code>Epusdt</code>接口</li><li>后台选择QQ官方支付然后填入你的<code>Epusdt</code>信息即可</li><li>版本功能已测，支付成功秒回调发货</li><li>网上很多彩虹接入USDT只是单文件页面api，没有TG机器人订单通知，安全稳定性也不高，自己并没有部署什么实质性的程序。</li><li>网上页面api可以自己测试下单，有的都不更新维护老掉牙了，出现同时间来的订单小数点金额不变，就会造成一人付款多人提货！（我是测试过了，只是个别人，资源网教程网还拿Bug版来卖，不好说名字，可以问我，我给你去看看）</li><li>安全性：本款插件是接入的Epusdt程序，部署在自己服务器上，完完全全自己掌控</li><li>稳定性：<code>Epusdt</code>也算是USDT支付收款界的骨灰级程序了，很多USDT支付都是借用了它的原理或者是源码来进行二次开发而来，所有可以说足够安全稳定。可自行搜索了解即可，说多了像说谎了。</li></ul><h2 id="接入前提醒"><a href="#接入前提醒" class="headerlink" title="接入前提醒"></a>接入前提醒</h2><ul><li>可先自行搭建好彩虹系统，然后上传EUSDT插件直接覆盖掉原文件即可</li><li>适用于彩虹任意版本，<code>USDT插件</code>覆盖原文件，或者打包我整理好的最新版彩虹整站源码</li><li><code>Epusdt</code>需要自行搭建好，自行谷歌搜教程。</li></ul><h2 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h2><ul><li>上传自己的彩虹自助下单源码并安装好（没有彩虹的可找我拿整站源码即可）</li><li>直接上传<code>Epusdt</code>插件覆盖包，覆盖掉彩虹系统里的QQ官方支付修改成<code>USDT支付</code>（QQ支付就不能再使用了，毕竟现在也没人用QQ支付）</li><li>得到后台<code>Epusdt</code>接口配置，去彩虹后台填写自己搭建好的<code>Epusdt</code>信息然后保存即可</li></ul><h2 id="后台配置EUSDT信息"><a href="#后台配置EUSDT信息" class="headerlink" title="后台配置EUSDT信息"></a>后台配置EUSDT信息</h2><p><img src="https://tc.izhan.cc/i/2024/04/17/212650.jpeg" alt="Test"></p><h2 id="添加USDT收款地址"><a href="#添加USDT收款地址" class="headerlink" title="添加USDT收款地址"></a>添加USDT收款地址</h2><p><img src="https://tc.izhan.cc/i/2024/04/17/220011.jpeg" alt="Test">  </p><h2 id="预览下单购买页"><a href="#预览下单购买页" class="headerlink" title="预览下单购买页"></a>预览下单购买页</h2><p><img src="https://tc.izhan.cc/i/2024/08/07/3eatu3.png" alt="Test"> </p><h2 id="EPusdt支付页面"><a href="#EPusdt支付页面" class="headerlink" title="EPusdt支付页面"></a>EPusdt支付页面</h2><p><img src="https://tc.izhan.cc/i/2024/08/07/3easud.png" alt="Test"> </p><h2 id="支付成功通知"><a href="#支付成功通知" class="headerlink" title="支付成功通知"></a>支付成功通知</h2><p><img src="https://tc.izhan.cc/i/2024/04/17/220010.jpeg" alt="Test"></p><h2 id="体验完结"><a href="#体验完结" class="headerlink" title="体验完结"></a>体验完结</h2><p><strong>注意：插件来之不易，所以不提供免费服务，这个插件我也一直在提供服务，就是给老板们一条龙服务，需要的可联系 @juejiang</strong><br><strong>号商还是很喜欢用彩虹的多</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>网站搭建</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>分享交流</tag>
+      
+      <tag>网站搭建</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>宝塔搭建Epusdt详细教程，搭建USDT支付收款教程，详细的USDT支付搭建教程，Epusdt详细的搭建教程（图文）</title>
     <link href="/2024/08/09/epusdt/"/>
     <url>/2024/08/09/epusdt/</url>
